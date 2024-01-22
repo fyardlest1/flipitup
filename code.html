@@ -86,7 +86,12 @@
 							</li>
 							<li class="nav-item">
 								<!-- CHANGE ME!!!!!!!! -->
-								<a class="nav-link" href="https://github.com/fyardlest1/flipitup" target='_blank'>The Repo</a>
+								<a
+									class="nav-link"
+									href="https://github.com/fyardlest1/flipitup"
+									target="_blank"
+									>The Repo</a
+								>
 							</li>
 							<li class="nav-item">
 								<a
@@ -162,13 +167,20 @@
 				</div>
 				<!-- Code explanation -->
 				<div class="col-12 col-lg-4">
-					<p>The code is structured in one fonction</p>
+					<h5>The step by Step process</h5>
 					<h5>
 						<code>getValue()</code>
 					</h5>
 					<p>
-						The <code>getValue</code> function gets the text
-						from the input and display it in a Sweet Alert popup.
+						The <code>getValue</code> The getValue function is the
+						function we call in our HTML page to do the magic. This
+						function takes the message that is passed into the field
+						and store it inside the variable <code>inputMessage</code>, then we
+						validate the message to ensure that the minimum number
+						of characters is at least 2. Then we call two other
+						functions (<code>reverseString</code>, <code>displayMessage</code>) which we will
+						dissect below. Note that we've used the early return to stop having an error 
+						message if everything is ok if the message is more than one character.
 					</p>
 					<h5>
 						<code>reverseString()</code>
