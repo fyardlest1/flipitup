@@ -1,6 +1,6 @@
 // creating the getValue
 function getValue() {
-	let inputMessage = document.getElementById('message').value
+	let inputMessage = document.getElementById('message').value;
 
 	if (inputMessage.length < 2) {
 		Swal.fire({
@@ -14,24 +14,26 @@ function getValue() {
 		return
 	}
 
-	let reversed = reverseString(inputMessage)
-	displayMessage(reversed)
+	let reversed = reverseString(inputMessage);
+	displayMessage(reversed);
 }
 
 // using string for simplicity
+// the function that will reverse our string.
 function reverseString(inputString) {
 	// You can treat a string just like an array
-	let result = ''
+	let result = '';
 
 	// decrementing for loop
 	for (let index = inputString.length - 1; index >= 0; index--) {
-		result += inputString[index]
+		result += inputString[index];
 	}
 
 	// return the string
-	return result
+	return result;
 }
 
+// display the reverse string on the page
 function displayMessage(reverseString) {
 	// put our message in the HTML
 	document.getElementById(
@@ -132,3 +134,15 @@ function displayMessageC(stringObject) {
 }
 
 ***/
+
+// function reversedInput(stringToReverse) {
+// 	let newString = ''
+
+// 	for (let index = stringToReverse.length -1; index >= 0; index--) {
+// 		newString += stringToReverse[index]
+// 	}
+
+// 	return newString
+// }
+
+// reversedInput('hello yayad')

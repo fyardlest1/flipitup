@@ -121,7 +121,7 @@
                         <code class="language-js">
                             // creating the getValue
 							function getValue() {
-								let inputMessage = document.getElementById('message').value
+								let inputMessage = document.getElementById('message').value;
 
 								if (inputMessage.length < 2) {
 									Swal.fire({
@@ -132,27 +132,29 @@
 									})
 
 									// This line is called early return
-									return;
+									return
 								}
 
-								let reversed = reverseString(inputMessage)
-								displayMessage(reversed)
+								let reversed = reverseString(inputMessage);
+								displayMessage(reversed);
 							}
 
 							// using string for simplicity
+							// the function that will reverse our string.
 							function reverseString(inputString) {
 								// You can treat a string just like an array
-								let result = ''
+								let result = '';
 
 								// decrementing for loop
 								for (let index = inputString.length - 1; index >= 0; index--) {
-									result += inputString[index]
+									result += inputString[index];
 								}
 
 								// return the string
-								return result
+								return result;
 							}
 
+							// display the reverse string on the page
 							function displayMessage(reverseString) {
 								// put our message in the HTML
 								document.getElementById(
@@ -206,25 +208,35 @@
 						and assigned an empty string to it, now the simplest way
 						is to take this sequences of characters iterate through
 						it using our friend the <code>for</code> loop. Here we
-						use what is called "decrementing for loop".
+						use what is called
+						<strong>"decrementing for loop"</strong>.
 					</p>
 					<p>
 						Since array indices in JavaScript are zero-based,
 						subtracting 1 from the length gives us the index of the
 						last character in the string. This is because the
 						indices start at 0, so the last index is one less than
-						the total length, that is why we use: 
-						<code>inputString.length - 1</code>. Now all we have to do is 
-						to take each character and add them together using string concatenation.
-						And at the end return the result so that we can use it later.
+						the total length, that is why we use:
+						<code>inputString.length - 1</code>. Now all we have to
+						do is to take each character and add them together using
+						string concatenation. And at the end return the result
+						so that we can use it later.
 					</p>
 					<h5>
 						<code>displayMessage()</code>
 					</h5>
 					<p>
-						The <code>displayMessage</code> function gets the text
-						from the input and display it in a Sweet Alert popup.
+						The <code>displayMessage</code> function's mission is to display the result of our
+						reverse string, and to do this we are using our good friend
+						<code>document.getElementById</code> to have access to the location
+						where we want to insert the result, that's means, somewhere in our
+						page where we have <code>id='result'</code> and <code>innerHTML</code> which is used
+						to retrieve the HTML content inside the element with the
+						id 'result'. At the end, we make our alert message
+						visible by removing the class that made it invisible by using 
+						<code>classList.remove('invisible')</code>.
 					</p>
+					<h5>That's kind of cool, right? <span class="fs-4">&#128526;</span></h5>
 				</div>
 			</div>
 		</main>
