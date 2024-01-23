@@ -175,19 +175,48 @@
 						The <code>getValue</code> The getValue function is the
 						function we call in our HTML page to do the magic. This
 						function takes the message that is passed into the field
-						and store it inside the variable <code>inputMessage</code>, then we
-						validate the message to ensure that the minimum number
-						of characters is at least 2. Then we call two other
-						functions (<code>reverseString</code>, <code>displayMessage</code>) which we will
-						dissect below. Note that we've used the early return to stop having an error 
-						message if everything is ok if the message is more than one character.
+						and store it inside the variable
+						<code>inputMessage</code>, then we validate the message
+						to ensure that the minimum number of characters is at
+						least 2. Then we call two other functions
+						(<code>reverseString</code>,
+						<code>displayMessage</code>) which we will dissect
+						below. Note that we've used the early return to stop
+						having an error message if everything is ok if the
+						message is more than one character.
 					</p>
 					<h5>
 						<code>reverseString()</code>
 					</h5>
 					<p>
-						The <code>reverseString</code> function gets the text
-						from the input and display it in a Sweet Alert popup.
+						The <code>reverseString</code> function takes care of
+						the application logic, what actually happens when you
+						insert a message into the field. There are countless
+						ways to reverse a string and perhaps the most popular
+						way you will find anywhere on the internet is without a
+						doubt using the JavaScript Array. But as far as I'm
+						concerned, the simplest way is to use our character
+						string straight out of our inputMessage. The reason is
+						simple, we know that both strings and arrays can store
+						sequences of values, strings are specifically designed
+						for sequences of characters the difference is that they
+						are different data type and what we want to do right now
+						is just to reverse our sequences of characters, so tha's
+						why we start by creating a <code>reslt</code> variable
+						and assigned an empty string to it, now the simplest way
+						is to take this sequences of characters iterate through
+						it using our friend the <code>for</code> loop. Here we
+						use what is called "decrementing for loop".
+					</p>
+					<p>
+						Since array indices in JavaScript are zero-based,
+						subtracting 1 from the length gives us the index of the
+						last character in the string. This is because the
+						indices start at 0, so the last index is one less than
+						the total length, that is why we use: 
+						<code>inputString.length - 1</code>. Now all we have to do is 
+						to take each character and add them together using string concatenation.
+						And at the end return the result so that we can use it later.
 					</p>
 					<h5>
 						<code>displayMessage()</code>
